@@ -55,9 +55,10 @@ pkgs.mkShell rec {
   name = "android-protobuf-pinger-client-env";
   packages = [ androidSdk
                platformTools
-	       jdk
-	       # pkgs.android-studio
-	     ];
+               jdk
+               # pkgs.android-studio
+               pkgs.protobuf
+             ];
 
   LANG = "C.UTF-8";
   LC_ALL = "C.UTF-8";
